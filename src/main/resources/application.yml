@@ -2,7 +2,22 @@ server:
   port: ${PORT:8000}
 
 management:
+  trace:
+    http:
+      enable: true
+      traceboy: true
   endpoints:
+    enable-by-default: true
     web:
       exposure:
-        include: beans
+        #include: beans
+        include: info,health,httptrace,trace,beans
+  endpoint:
+    trace:
+      enabled: true
+    health:
+        show-details: always
+
+spring:
+  main:
+    lazy-initialization: true
