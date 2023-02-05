@@ -1,6 +1,5 @@
 package spring.servicios;
 
-
 import static java.lang.String.format;
 
 public class ServicioA {
